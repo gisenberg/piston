@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Piston.Push.Web", "Piston.Push.Web\Piston.Push.Web.csproj", "{56AD0E67-3083-4B2F-94F1-D36944420642}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Piston.Push.Core", "Piston.Push.Core\Piston.Push.Core.csproj", "{E492134F-C0C1-49B1-B689-76800D8ADD41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Piston.Push.PushCmd", "Piston.Push.PushCmd\Piston.Push.PushCmd.csproj", "{31D0AF6F-A3B5-4D41-BA27-87C47842BE71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Piston.Push.WindowsService", "Piston.Push.WindowsService\Piston.Push.WindowsService.csproj", "{67EFB9E0-116F-41CC-A72B-1CF786B38ADF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Piston.Push.Driver", "Piston.Push.Driver\Piston.Push.Driver.csproj", "{EA5315BE-93E2-4404-BFB3-80068B86968B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scratch", "Scratch\Scratch.csproj", "{6F81E3B2-3832-41A6-A89B-B2428051E47C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{FC560275-6A1D-4569-B8CD-55E103C73195}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56AD0E67-3083-4B2F-94F1-D36944420642}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56AD0E67-3083-4B2F-94F1-D36944420642}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56AD0E67-3083-4B2F-94F1-D36944420642}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56AD0E67-3083-4B2F-94F1-D36944420642}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E492134F-C0C1-49B1-B689-76800D8ADD41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E492134F-C0C1-49B1-B689-76800D8ADD41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E492134F-C0C1-49B1-B689-76800D8ADD41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E492134F-C0C1-49B1-B689-76800D8ADD41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31D0AF6F-A3B5-4D41-BA27-87C47842BE71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31D0AF6F-A3B5-4D41-BA27-87C47842BE71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31D0AF6F-A3B5-4D41-BA27-87C47842BE71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31D0AF6F-A3B5-4D41-BA27-87C47842BE71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67EFB9E0-116F-41CC-A72B-1CF786B38ADF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67EFB9E0-116F-41CC-A72B-1CF786B38ADF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67EFB9E0-116F-41CC-A72B-1CF786B38ADF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67EFB9E0-116F-41CC-A72B-1CF786B38ADF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA5315BE-93E2-4404-BFB3-80068B86968B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA5315BE-93E2-4404-BFB3-80068B86968B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA5315BE-93E2-4404-BFB3-80068B86968B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA5315BE-93E2-4404-BFB3-80068B86968B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F81E3B2-3832-41A6-A89B-B2428051E47C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F81E3B2-3832-41A6-A89B-B2428051E47C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F81E3B2-3832-41A6-A89B-B2428051E47C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F81E3B2-3832-41A6-A89B-B2428051E47C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35
+	EndGlobalSection
+EndGlobal

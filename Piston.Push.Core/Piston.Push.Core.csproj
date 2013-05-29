@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E492134F-C0C1-49B1-B689-76800D8ADD41}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Piston.Push.Core</RootNamespace>
+    <AssemblyName>Piston.Push.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\packages\Unity.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\packages\Unity.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\packages\mongocsharpdriver.1.8.0\lib\net35\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\packages\mongocsharpdriver.1.8.0\lib\net35\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RabbitMQ.Client">
+      <HintPath>..\packages\RabbitMQ.Client.3.0.4\lib\net30\RabbitMQ.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Agents\Agent.cs" />
+    <Compile Include="Agents\ApnsAgent.cs" />
+    <Compile Include="Agents\GcmAgent.cs" />
+    <Compile Include="Agents\MpnsAgent.cs" />
+    <Compile Include="Agents\WnsAgent.cs" />
+    <Compile Include="Config\ApnsElement.cs" />
+    <Compile Include="Config\GcmElement.cs" />
+    <Compile Include="Config\MpnsElement.cs" />
+    <Compile Include="Config\IAgentSettings.cs" />
+    <Compile Include="Config\WnsElement.cs" />
+    <Compile Include="Exceptions\FatalServiceException.cs" />
+    <Compile Include="Exceptions\TemporaryUndeliverableException.cs" />
+    <Compile Include="Exceptions\TemporaryServiceException.cs" />
+    <Compile Include="FormattingExtensions.cs" />
+    <Compile Include="Exceptions\UndeliverableException.cs" />
+    <Compile Include="Model\AppMetadata.cs" />
+    <Compile Include="Model\AppSecret.cs" />
+    <Compile Include="Model\GcmPayload.cs" />
+    <Compile Include="Model\MpnsPayload.cs" />
+    <Compile Include="Model\WnsPayload.cs" />
+    <Compile Include="Queue\INotificationConsumer.cs" />
+    <Compile Include="Queue\NotificationEventArgs.cs" />
+    <Compile Include="Queue\RabbitConsumer.cs" />
+    <Compile Include="Model\DeviceToken.cs" />
+    <Compile Include="Model\NotificationRequest.cs" />
+    <Compile Include="Model\Platform.cs" />
+    <Compile Include="Exceptions\ValidationException.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Config\SettingsSection.cs" />
+    <Compile Include="Queue\INotificationPublisher.cs" />
+    <Compile Include="Queue\RabbitContext.cs" />
+    <Compile Include="Queue\RabbitExtensions.cs" />
+    <Compile Include="Server.cs" />
+    <Compile Include="Storage\IMetaStore.cs" />
+    <Compile Include="Storage\ITokenStore.cs" />
+    <Compile Include="Model\Registration.cs" />
+    <Compile Include="Queue\RabbitPublisher.cs" />
+    <Compile Include="Storage\MongoMetaStore.cs" />
+    <Compile Include="Storage\MongoTokenStore.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
