@@ -66,3 +66,6 @@ See docs/pushgw_installation.docx for detailed configuration information.
             iosNote.Segments.Add("all");
             iosNote.Payload.SetBadge(3);
 ```
+
+##Licensing
+Piston is licensed under the terms of the MIT License, see the included MIT-LICENSE file.
